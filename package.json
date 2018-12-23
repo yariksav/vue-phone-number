@@ -1,0 +1,64 @@
+{
+  "name": "vue-phone-number",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/vue-phone-number.umd.js",
+  "module": "dist/vue-phone-number.esm.js",
+  "unpkg": "dist/vue-phone-number.min.js",
+  "browser": {
+    "./sfc": "src/vue-phone-number.vue"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-phone-number.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-phone-number.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-phone-number.min.js"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "country-telephone-data": "^0.6.0",
+    "vue-flag": "^0.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "get-json": "^1.0.1",
+    "libphonenumber-js": "^1.6.9",
+    "minimist": "^1.2.0",
+    "rollup": "^0.66.2",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.3.0",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16",
+    "vuetify": "^1.3.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yariksav/vue-phone-number.git"
+  },
+  "keywords": [
+    "vue",
+    "google",
+    "places",
+    "autocomplete",
+    "vuetify"
+  ],
+  "author": "Yaroslav Savaryn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yariksav/vue-phone-number/issues"
+  },
+  "homepage": "https://github.com/yariksav/vue-phone-number"
+}
